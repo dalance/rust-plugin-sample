@@ -1,0 +1,11 @@
+[package]
+name = "plugin_add"
+version = "0.1.0"
+authors = ["hatta"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+calc = {path = "../calc"}
