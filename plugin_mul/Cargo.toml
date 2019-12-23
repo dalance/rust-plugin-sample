@@ -5,7 +5,7 @@ authors = ["hatta"]
 edition = "2018"
 
 [lib]
-crate-type = ["cdylib"]
+crate-type = ["dylib"]
 
 [dependencies]
 calc = {path = "../calc"}
