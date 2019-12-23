@@ -1,15 +1,9 @@
 use calc::Plugin;
 
 #[no_mangle]
-pub extern "C" fn load_plugin() -> *mut dyn Plugin {
-    let boxed = Box::new(PluginAdd);
-    Box::into_raw(boxed)
+pub extern "C" fn load_plugin() -> Box<dyn Plugin> {
+    Box::new(PluginAdd)
 }
-
-//#[no_mangle]
-//pub extern "C" fn load_plugin() -> Box<dyn Plugin> {
-//    Box::new(PluginAdd)
-//}
 
 pub struct PluginAdd;
 
