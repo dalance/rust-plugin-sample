@@ -1,6 +1,10 @@
 use anyhow::Result;
 use calc::PluginManager;
+use std::alloc::System;
 use std::path::PathBuf;
+
+#[global_allocator]
+static ALLOCATOR: System = System;
 
 fn main() -> Result<()> {
     let mut pm = PluginManager::new();
